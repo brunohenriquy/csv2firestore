@@ -17,7 +17,7 @@ if (data && (typeof data === "object")) {
     Object.keys(data).forEach(docKey => {
         firestore
             .collection(collectionKey)
-            .doc(docKey)
+            .doc()
             .set(data[docKey])
             .then((res) => {
                 console.log("Document " + docKey + " successfully written!");
